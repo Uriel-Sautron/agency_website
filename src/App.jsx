@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Works from './pages/Works';
 import ModeContext from './Context/Mode';
 import './Sass/App.scss';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -19,9 +20,7 @@ function App() {
     <ModeContext.Provider value={{ isDark, toogleDark }}>
       <Router>
         <div className={isDark ? 'dark-body' : null}>
-          <header>
-            <Nav />
-          </header>
+          <Nav />
           <Switch>
             <Route path="/" exact>
               <Home />
@@ -33,6 +32,7 @@ function App() {
               <About />
             </Route>
           </Switch>
+          <Footer />
         </div>
       </Router>
     </ModeContext.Provider>

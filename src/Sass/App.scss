@@ -1,7 +1,143 @@
-$primary: white;
+@import './index.scss';
 
-.dark-body {
-  $primary: black;
+$primary: #6e62ee;
+$primary-variant: #4247b3;
+$secondary: #6bdcc7;
+$secondary-variant: #3e8886;
+$background: white;
+$gray: rgba(255, 255, 255, 0.678);
+// NavBar
+header {
   background-color: $primary;
   color: white;
+}
+.nav {
+  padding: 0 2em 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid $primary-variant;
+  h1 {
+    font-size: 4em;
+    color: $gray;
+  }
+
+  a {
+    color: white;
+    margin-right: 10px;
+  }
+
+  button {
+    height: 20px;
+  }
+
+  svg {
+    color: $gray;
+    cursor: pointer;
+  }
+}
+
+// Section
+section {
+  display: flex;
+  justify-content: space-between;
+  color: $primary-variant;
+
+  h2 {
+    font-size: 2em;
+    padding-left: 2em;
+  }
+
+  h3 {
+    text-align: center;
+    margin: 1em 0 3em 0;
+    font-size: 3em;
+  }
+
+  .home-left,
+  .works-left,
+  .about-left {
+    width: 15%;
+  }
+
+  .home,
+  .about,
+  .works {
+    border-left: 3px solid $primary-variant;
+    height: 85vh;
+    width: 85%;
+    padding: 0 15em;
+  }
+
+  li {
+    list-style: none;
+    margin-top: 3em;
+    font-size: 2em;
+  }
+
+  a {
+    color: black;
+  }
+}
+
+footer {
+  height: 4em;
+  text-align: center;
+  border-top: 3px solid $primary-variant;
+  color: $gray;
+  background-color: $primary;
+  span {
+    color: red;
+    margin: 0 5px;
+  }
+}
+
+// DarkMode
+
+.dark-body {
+  $primary: #250250;
+  $primary-variant: #4247b3;
+  $secondary: #6bdcc7;
+  $secondary-variant: #6bdcc7;
+  $background: black;
+  $gray: rgba(255, 255, 255, 0.678);
+  background-color: $background;
+  color: rgb(168, 168, 168);
+  min-height: 100vh;
+
+  // NavBar
+  header {
+    background-color: $primary;
+    color: $gray;
+  }
+  .nav {
+    border-bottom: 3px solid $gray;
+  }
+
+  // Section
+  section {
+    color: $gray;
+
+    .home,
+    .about,
+    .works {
+      border-left: 3px solid $gray;
+      height: 85vh;
+      width: 85%;
+      padding: 0 15em;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      color: $primary;
+    }
+  }
+
+  footer {
+    background-color: $primary;
+    border-top: 3px solid $gray;
+  }
 }

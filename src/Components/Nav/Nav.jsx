@@ -1,24 +1,28 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-regular-svg-icons';
 import ModeContext from '../../Context/Mode';
-import Button from '../../tools/Button';
 
 const Nav = () => {
   const { isDark, toogleDark } = useContext(ModeContext);
 
   return (
-    <div>
-      <h1>Websitic</h1>
+    <header className="nav">
       <div>
-        <Link to="/">Home</Link>
-        <Link to="/works">Works</Link>
-        <Link to="/about">About</Link>
+        <h1>Websitic</h1>
+        <div className="nav-links">
+          <Link to="/">Home</Link>
+          <Link to="/works">Works</Link>
+          <Link to="/about">About</Link>
+        </div>
       </div>
-      <Button
-        content={isDark ? 'LightMode' : 'DarkMode'}
+      <FontAwesomeIcon
+        icon={isDark ? faSun : faMoon}
+        size="3x"
         onClick={(e) => toogleDark(e, isDark)}
       />
-    </div>
+    </header>
   );
 };
 
