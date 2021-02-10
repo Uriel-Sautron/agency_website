@@ -1,6 +1,5 @@
 {
   "[json]": {
-    "editor.formatOnSave": true,
     "editor.quickSuggestions": {
       "strings": true
     },
@@ -10,8 +9,7 @@
   "prettier.jsxBracketSameLine": true,
   "prettier.singleQuote": true,
   "prettier.useTabs": true,
-  "sqltools.results": {
-    
-  }
-  
+  "sqltools.results": {},
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true
 }
