@@ -30,12 +30,12 @@ body {
 
   a {
     transition: 0.4s ease;
-    background: $primary;
+    background: transparent;
     color: $gray;
     font-size: 18px;
     text-decoration: none;
-    border-top: 4px solid $primary;
-    border-bottom: 4px solid $primary;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
     padding: 10px 0;
     margin-right: 50px;
   }
@@ -208,10 +208,7 @@ footer {
     border-bottom: 3px solid $gray;
 
     a {
-      background: $primary;
       color: $gray;
-      border-top: 4px solid $primary;
-      border-bottom: 4px solid $primary;
     }
     a:hover {
       border-top: 4px solid $gray;
