@@ -11,6 +11,10 @@ header {
   background-color: $primary;
   color: white;
 }
+body {
+  position: relative;
+  min-height: 100vh;
+}
 .nav {
   padding: 0 2em 1em 2em;
   display: flex;
@@ -46,6 +50,7 @@ section {
   h2 {
     font-size: 2em;
     padding-left: 2em;
+    margin: 2em auto;
   }
 
   h3 {
@@ -64,7 +69,7 @@ section {
   .about,
   .works {
     border-left: 3px solid $primary-variant;
-    height: 85vh;
+    min-height: 100vh;
     width: 85%;
     padding: 0 15em;
   }
@@ -77,6 +82,10 @@ section {
 
   a {
     color: black;
+  }
+
+  p {
+    text-align: center;
   }
 }
 
@@ -95,6 +104,7 @@ footer {
 // DarkMode
 
 .dark-body {
+  transition-duration: 500;
   $primary: #250250;
   $primary-variant: #4247b3;
   $secondary: #6bdcc7;
@@ -122,7 +132,7 @@ footer {
     .about,
     .works {
       border-left: 3px solid $gray;
-      height: 85vh;
+      height: 100vh;
       width: 85%;
       padding: 0 15em;
     }
@@ -137,6 +147,8 @@ footer {
   }
 
   footer {
+    position: absolute;
+    bottom: 0;
     background-color: $primary;
     border-top: 3px solid $gray;
   }

@@ -11,7 +11,7 @@ const Works = () => (
         <ul>
           {clients.map((client) => (
             <li>
-              <Link to={`/works/${client.slug}`} key={client.slug}>
+              <Link to={`/works/${client.slug}`} key={client.name}>
                 {client.name}
               </Link>
             </li>
