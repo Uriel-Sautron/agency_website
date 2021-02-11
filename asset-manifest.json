@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/agency_website/static/css/main.7b43213e.chunk.css",
-    "main.js": "/agency_website/static/js/main.26b888fc.chunk.js",
-    "main.js.map": "/agency_website/static/js/main.26b888fc.chunk.js.map",
+    "main.css": "/agency_website/static/css/main.f79d1762.chunk.css",
+    "main.js": "/agency_website/static/js/main.580afadd.chunk.js",
+    "main.js.map": "/agency_website/static/js/main.580afadd.chunk.js.map",
     "runtime-main.js": "/agency_website/static/js/runtime-main.895126c4.js",
     "runtime-main.js.map": "/agency_website/static/js/runtime-main.895126c4.js.map",
     "static/js/2.a90333dc.chunk.js": "/agency_website/static/js/2.a90333dc.chunk.js",
     "static/js/2.a90333dc.chunk.js.map": "/agency_website/static/js/2.a90333dc.chunk.js.map",
     "index.html": "/agency_website/index.html",
-    "static/css/main.7b43213e.chunk.css.map": "/agency_website/static/css/main.7b43213e.chunk.css.map",
-    "static/js/2.a90333dc.chunk.js.LICENSE.txt": "/agency_website/static/js/2.a90333dc.chunk.js.LICENSE.txt"
+    "static/css/main.f79d1762.chunk.css.map": "/agency_website/static/css/main.f79d1762.chunk.css.map",
+    "static/js/2.a90333dc.chunk.js.LICENSE.txt": "/agency_website/static/js/2.a90333dc.chunk.js.LICENSE.txt",
+    "static/media/about.be250b2a.jpg": "/agency_website/static/media/about.be250b2a.jpg",
+    "static/media/home.41d84077.jpg": "/agency_website/static/media/home.41d84077.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.895126c4.js",
     "static/js/2.a90333dc.chunk.js",
-    "static/css/main.7b43213e.chunk.css",
-    "static/js/main.26b888fc.chunk.js"
+    "static/css/main.f79d1762.chunk.css",
+    "static/js/main.580afadd.chunk.js"
   ]
 }
