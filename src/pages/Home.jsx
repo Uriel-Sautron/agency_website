@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import homeImg from '../images/home.jpg';
 
 const Home = () => (
   <section>
@@ -8,6 +9,9 @@ const Home = () => (
     </div>
 
     <div className="home">
+      <div className="img-section">
+        <img src={homeImg} alt="home img" />
+      </div>
       <h3>Confiez vos rêves à des experts du Web</h3>
       <p>
         Grâce à notre savoir-faire, notre expérience et notre écoute, nous

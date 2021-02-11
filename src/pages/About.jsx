@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import aboutImg from '../images/about.jpg';
 
 const About = () => (
   <section>
@@ -8,6 +9,9 @@ const About = () => (
     </div>
 
     <div className="about">
+      <div className="img-section">
+        <img src={aboutImg} alt="about" />
+      </div>
       <h3>
         Websitic est une Agence de communication digitale à paris ayant pour
         mission de vous accompagner sur vos projets digitaux.

@@ -5,11 +5,5 @@
     },
     "editor.suggest.insertMode": "replace"
   },
-  "prettier.jsxSingleQuote": true,
-  "prettier.jsxBracketSameLine": true,
-  "prettier.singleQuote": true,
-  "prettier.useTabs": true,
-  "sqltools.results": {},
-  "editor.tabSize": 2,
   "editor.formatOnSave": true
 }
