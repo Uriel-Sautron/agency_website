@@ -10,25 +10,23 @@ import './Sass/App.scss';
 import Footer from './Components/Footer/Footer';
 
 function App() {
-  const userMedia = matchMedia('(prefers-color-scheme: dark)').matches;
-  const [isDark, setIsDark] = useState(!userMedia);
+  const [isDark, setIsDark] = useState(false);
   const toogleDark = (e, dark) => {
     e.preventDefault();
     const darkToogle = !dark;
-    localStorage.setItem('dark', JSON.stringify(darkToogle));
+    localStorage.setItem('dark', JSON.stringify({ darkMode: darkToogle }));
     setIsDark(darkToogle);
   };
 
   React.useEffect(() => {
     const localStorageDark = JSON.parse(localStorage.getItem('dark'));
-    // const userMedia = matchMedia('(prefers-color-scheme: dark)').matches;
-    console.log('localStorageDark:', localStorageDark);
-    setIsDark(localStorageDark);
+    const userMedia = matchMedia('(prefers-color-scheme: dark)');
 
-    // if (userMedia) {
-    //   setIsDark(userMedia);
-    //   console.log('userMedia');
-    // }
+    if (!localStorageDark && userMedia) {
+      setIsDark(userMedia.matches);
+    } else {
+      setIsDark(localStorageDark.darkMode);
+    }
   }, []);
 
   return (

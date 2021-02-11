@@ -1,4 +1,5 @@
 @import './index.scss';
+@import './responsive.scss';
 
 $primary: #6e62ee;
 $primary-variant: #4247b3;
@@ -12,6 +13,7 @@ header {
   color: white;
 }
 body {
+  padding-bottom: 4em;
   position: relative;
   min-height: 100vh;
 }
@@ -27,8 +29,20 @@ body {
   }
 
   a {
-    color: white;
-    margin-right: 10px;
+    transition: 0.4s ease;
+    background: $primary;
+    color: $gray;
+    font-size: 18px;
+    text-decoration: none;
+    border-top: 4px solid $primary;
+    border-bottom: 4px solid $primary;
+    padding: 10px 0;
+    margin-right: 50px;
+  }
+  a:hover {
+    border-top: 4px solid $gray;
+    border-bottom: 4px solid $gray;
+    padding: 6px 0; 
   }
 
   button {
@@ -48,9 +62,9 @@ section {
   color: $primary-variant;
 
   h2 {
-    font-size: 2em;
-    padding-left: 2em;
-    margin: 2em auto;
+    font-size: 3em;
+    text-align: center;
+    margin: 1em auto;
   }
 
   h3 {
@@ -58,6 +72,8 @@ section {
     margin: 1em 0 3em 0;
     font-size: 3em;
   }
+
+  
 
   .home-left,
   .works-left,
@@ -69,27 +85,96 @@ section {
   .about,
   .works {
     border-left: 3px solid $primary-variant;
-    min-height: 100vh;
     width: 85%;
-    padding: 0 15em;
+    min-height: 100vh;
+  }
+
+  .works-projects {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 0;
+  
   }
 
   li {
+    background-color: $primary;
+    color: $gray;
     list-style: none;
-    margin-top: 3em;
-    font-size: 2em;
+    font-size: 3em;
+    border: 2px solid $primary-variant;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+    
+    &:hover {
+      background-color: white;
+      color: $primary;
+      border-color: $primary;
+      letter-spacing: .1em;
+    }
   }
 
   a {
     color: black;
+    width: 30%;
   }
 
   p {
     text-align: center;
+    font-size: 18px;
+    margin-bottom: 3em;
+  }
+}
+
+// Cards
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 1em auto;
+
+  a {
+    border: 2px solid $primary-variant;
+    width: 30%;
+    border-radius: 5px;
+    height: 50%;
+  }
+}
+.card {
+  height: 100%;
+  h2 {
+    background-color: $primary;
+    color: $gray;
+    font-size: 3em;
+    margin-top: 0;
+    height: 2em;
+    border-bottom: 2px solid $primary-variant;
+  }
+
+  h3 {
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+  }
+}
+
+.icon-cards {
+  margin-top: 5em;
+  text-align: center;
+  svg {
+    cursor: pointer;
   }
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   height: 4em;
   text-align: center;
   border-top: 3px solid $primary-variant;
@@ -109,11 +194,10 @@ footer {
   $primary-variant: #4247b3;
   $secondary: #6bdcc7;
   $secondary-variant: #6bdcc7;
-  $background: black;
+  $background: rgb(29, 28, 28);
   $gray: rgba(255, 255, 255, 0.678);
   background-color: $background;
   color: rgb(168, 168, 168);
-  min-height: 100vh;
 
   // NavBar
   header {
@@ -122,6 +206,17 @@ footer {
   }
   .nav {
     border-bottom: 3px solid $gray;
+
+    a {
+      background: $primary;
+      color: $gray;
+      border-top: 4px solid $primary;
+      border-bottom: 4px solid $primary;
+    }
+    a:hover {
+      border-top: 4px solid $gray;
+      border-bottom: 4px solid $gray;
+    }
   }
 
   // Section
@@ -132,13 +227,16 @@ footer {
     .about,
     .works {
       border-left: 3px solid $gray;
-      height: 100vh;
-      width: 85%;
-      padding: 0 15em;
     }
 
     li {
-      list-style: none;
+      background-color: $primary;
+      border: 2px solid $gray;
+      &:hover {
+        background-color: $gray;
+        color: $primary;
+        border-color: $primary;
+      }
     }
 
     a {
@@ -146,10 +244,40 @@ footer {
     }
   }
 
+  .cards-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 1em auto;
+
+    a {
+      border: 2px solid $gray;
+    }
+  }
+  .card {
+    h2 {
+      background-color: $primary;
+      border-bottom: 2px solid $gray;
+    }
+
+    h3 {
+      color: $gray;
+    }
+  }
+
   footer {
-    position: absolute;
-    bottom: 0;
     background-color: $primary;
     border-top: 3px solid $gray;
   }
 }
+
+// RESPONSIVE //
+@media #{$small} {
+}
+
+@media #{$medium} {
+}
+
+@media #{$large} {
+}
+
